@@ -1,0 +1,7 @@
+{
+  "name": "fideli",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

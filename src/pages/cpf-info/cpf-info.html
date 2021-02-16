@@ -1,0 +1,15 @@
+
+
+<ion-content padding>
+  <div class="img">
+      <img src="./assets/imgs/logo.jpeg" alt="">
+    </div>
+  <div class="info">
+    Bem vindo, informe seu email para fazer login, ou, se cadastrar.
+  </div>
+  <ion-item>
+    <ion-input type="email" [(ngModel)]="email" placeholder="Email..."></ion-input>
+  </ion-item>
+  <button ion-button icon-right block color="fourth" (click)="send(email)">Enviar<ion-icon name="send"></ion-icon></button>
+  <button ion-button clear icon-right block color="light" (click)="goGuest()">Entrar como visitante</button>
+</ion-content>

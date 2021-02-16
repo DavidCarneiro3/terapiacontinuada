@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <ion-title>Go Fidelize</ion-title>
+      
+  </ion-navbar>
+  
+</ion-header>
+
+<ion-content>
+  <div class="info" ion-fixed>
+    Locais na região
+  </div>
+  <ion-list no-lines class="order" ion-fixed>
+    <ion-item>
+      <ion-label>Ordenar:</ion-label>
+        <ion-select [(ngModel)]="ordenation" (ionChange)="reorder()">
+          <ion-option value="+distance">Mais próximos</ion-option>
+          <ion-option value="-uscore">Pontuação+</ion-option>
+          <ion-option value="+uscore">Pontuação-</ion-option>
+        </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+  <ion-item *ngFor="let item of users | orderBy : [order]:ordenation" [hidden]="item.hidden" (click)="openModal(item)" >
+      
+      <ion-thumbnail item-start>
+        <img src="{{'http://gofidelize.tempsite.ws/service/lojas/'+item.img}}">
+      </ion-thumbnail>
+      <h2 class="title">{{item.name}}</h2>
+      <p>{{item.district+' - '+item.street+', '+item.number}}</p>
+      <p *ngIf="item.distance"><ion-icon class="icon" name="pin"></ion-icon>{{' '+item.distance+' km'}}</p>
+      <p><ion-icon class="icon" name="ios-star"></ion-icon>{{' '+item.uscore+' '}}<ion-icon class="icon" name="ribbon"></ion-icon>{{' '+item.uexc+' '}}</p>
+      <ion-icon name="arrow-dropright" item-end color="primary"></ion-icon>
+    </ion-item>
+ </ion-list>
+</ion-content>

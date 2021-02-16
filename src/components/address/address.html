@@ -1,0 +1,23 @@
+
+<div class="alert-content">
+  <div class="content-center">
+    <ion-card *ngFor="let item of data">
+  
+      <ion-card-content>
+        <ion-card-title>
+          <h3>{{item.name_adv}}</h3>
+          </ion-card-title>
+        <p>
+          <ion-icon name="pin"></ion-icon>
+          {{item.street+', '+item.number+' - '+item.district}}
+        </p>
+        <p>
+            <ion-icon name="call" item-start></ion-icon>
+              {{item.phone}}
+        </p>
+      </ion-card-content>
+      
+    </ion-card>
+  </div>
+  <p class="content-exit" (tap)="exit()"><ion-icon name="undo"></ion-icon></p>
+</div>

@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Terapia Continuada</ion-title>
+
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content>
+<!-- <div>
+  <ion-list *ngFor="let item of itens" >
+  <ion-item>
+      
+    <ion-thumbnail item-start>
+      <img src="{{'http://gofidelize.tempsite.ws/service/lojas/'+item.img}}">
+    </ion-thumbnail>
+    <h2 class="title">{{item.name}}</h2>
+    <p (click)="route()"><ion-icon name="map" icon-left></ion-icon>{{' '+item.street+', '+item.number}}</p>
+    <p (tap)="call(item.phone)"><ion-icon name="call"></ion-icon>{{' '+item.phone}}</p>
+    <p><ion-icon name="contacts"></ion-icon>{{' '+count+ ' Pessoas foram a essa loja'}}</p>
+    </ion-item>
+   
+  </ion-list>
+  <div class="scores">
+    Você tem <span>{{uscore}}</span> pontos
+  </div>
+  
+  <div class="section">
+    <h2 class="head">Prêmios</h2>
+    <div class="prods" *ngFor="let data of dados" tappable (tap)="exchange(data)">
+      <span class="txt">{{data.name}}</span><label>{{data.value+' pts.'}}</label>
+      <progress-bar [progress]="uscore" [percent]="percent(uscore,data.value)" [value]="100" *ngIf="percent(uscore,data.value)<100" [color]="primary"></progress-bar>
+      <progress-bar [progress]="uscore" [percent]="percent(uscore,data.value)" [value]="100" *ngIf="percent(uscore,data.value)==100" [color]="secondary"></progress-bar>
+    </div>
+  </div>
+  <div class="section">
+    <h2 class="head">Sobre a loja</h2>
+      <div class="about">{{about}}</div>
+  </div>
+  <div class="section" *ngIf="adscore != 0">
+    <h2 class="bonus">Bonus</h2>
+      <div *ngIf="adscore>1" class="about">Ganhe {{adscore}} pontos a cada {{'R$'+advalue}}</div>
+      <div *ngIf="adscore==1" class="about">Ganhe {{adscore}} ponto a cada {{'R$'+advalue}}</div>
+  </div>
+</div>
+<br> -->
+<ion-grid>
+  <ion-row>
+    <ion-col col-6>
+      <ion-card>
+        <img src="assets/imgs/fisio1.jpg">
+        <ion-card-content>
+          <ion-card-title>
+            <h2 class="card-title">Serviço 1</h2> 
+          </ion-card-title>
+          <p class="price">R$29,90</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col col-6>
+      <ion-card (click)="goToProd(item)">
+        <img src="assets/imgs/fisio2.jpeg">
+        <ion-card-content>
+          <ion-card-title>
+            <h2 class="card-title">Serviço 2</h2> 
+          </ion-card-title>
+          <p class="price">R$39,90</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-6>
+      <ion-card (click)="goToProd(item)">
+        <img src="assets/imgs/fisio3.jpeg">
+        <ion-card-content>
+          <ion-card-title>
+            <h2 class="card-title">Serviço 3</h2> 
+          </ion-card-title>
+          <p class="price">R$49,90</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col col-6>
+      <ion-card (click)="goToProd(item)">
+        <img src="assets/imgs/fisio4.jpeg">
+        <ion-card-content>
+          <ion-card-title>
+            <h2 class="card-title">Serviço 4</h2> 
+          </ion-card-title>
+          <p class="price">R$59,90</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-6>
+      <ion-card (click)="goToProd(item)">
+        <img src="assets/imgs/fisio5.jpeg">
+        <ion-card-content>
+          <ion-card-title>
+            <h2 class="card-title">Serviço 5</h2> 
+          </ion-card-title>
+          <p class="price">R$79,90</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col col-6>
+      <ion-card (click)="goToProd(item)">
+        <img src="assets/imgs/fisio6.jpeg">
+        <ion-card-content>
+          <ion-card-title>
+            <h2 class="card-title">Serviço 6</h2> 
+          </ion-card-title>
+          <p class="price">R$89,90</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>

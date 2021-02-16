@@ -1,0 +1,175 @@
+page-modal-itens {
+      $break-small: 420px;
+$break-large: 1024px;
+
+@mixin respond-to($media){
+  @if $media == handhelds{
+    @media only screen and (max-width: $break-small){@content;}
+  }
+  @else if $media == medium-screens{
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1){@content}
+  }
+  @else if $media == wide-screen{
+    @media only screen and (min-width: $break-large){@content}
+  }
+}
+
+.content{
+  @include respond-to(handhelds){
+      width: 100%;
+    }
+    @include respond-to(medium-screen){
+      width: 75%;
+    }
+    @include respond-to(wide-screen){
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      width: 75%;
+    }
+
+    @mixin center{
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      text-align: center;
+    }
+    top: 0;
+}
+    .img{
+        margin-top: 1px;
+        width: 400px;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .right{
+        float: right;
+        margin-right: -10px;
+        margin-top: -10px; 
+    }
+    
+    .left{
+        float:left;
+    }
+    .card{
+      
+      text-align: center;
+      .card-title{
+        //font-family: 'kohinoor';
+        color: color($colors, primary);
+        font-weight: bold;
+        padding: 0;
+        font-size: 1.4rem;
+      }
+      .price{
+        color: color($colors, danger);
+        font-size: 1.5rem;
+        font-weight: bolder;
+      }
+      .card-content{
+        padding: 1%;
+      }
+      img{
+        height: 83%;
+      }
+
+    }.ion-slides{
+      position: relative;
+    }
+    
+  
+     .list{
+       height: auto;
+       border-radius: 5px;
+
+       h2{
+         color: color($colors,primary);
+         font-weight: bold;
+       }
+
+      .title{
+         color: color($colors,primary);
+         font-weight: bold;
+         padding: 0;
+         font-size: 2.2rem;
+       }
+       img{
+         width: 80px;
+         height: 100px;
+       }
+       p{
+        font-size: 1.1rem;
+       }
+       .card-content{
+         font-size: 1em;
+         color: #ccc;
+         padding: 0px;
+         
+       }
+
+       
+        
+       .ends{
+         height: 45px;
+         margin-left: 5px;
+       }
+     }
+     
+    .title{
+      color: color($colors,primary);
+      font-weight: bold;
+    }
+    .section{
+      width: 90%;
+      margin-left: 5%;
+      background-color: #fff;
+    }
+    .head{
+      background-color: color($colors,secondary);
+      color: #fff;
+      padding: 1%;
+      font-size: 18px;
+      text-align: center;
+    }
+    .bonus{
+      background-color: color($colors,primary);
+      color: #fff;
+      padding: 1%;
+      font-size: 18px;
+      text-align: center;
+    }
+    .scores{
+      text-align: center;
+      font-size: 20px;
+      color: color($colors,fonts);
+      span{
+        color: color($colors,primary);
+        font-weight: bold;
+      }
+    }
+    .prods{
+      padding: 11px;
+      margin-top: 5px;
+      margin-left: -5px;
+      label{
+        float: right;
+        font-size: 20px;
+        color: color($colors,fonts);
+        font-weight: bold;
+      }
+      .txt{
+        color: color($colors,fonts);
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+    
+    .about{
+      padding: 1%;
+      color: color($colors,fonts);
+    }
+}

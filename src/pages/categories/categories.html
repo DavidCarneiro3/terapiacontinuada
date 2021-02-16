@@ -1,0 +1,16 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Go Fidelize</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let item of cats" (click)="goToPage(item.catid)">
+      {{ item.name }}
+    </button> 
+  </ion-list>
+</ion-content>

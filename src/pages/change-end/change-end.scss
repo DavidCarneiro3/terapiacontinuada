@@ -1,0 +1,28 @@
+page-change-end {
+    .score-info{
+        border-radius: 18px;
+        margin: 5% 10%;
+        height: 50%;
+        width: 80%;
+        background-color: white;
+        font-size: 32px;
+        p{
+            padding: 9px;
+            font-size: 32px;
+            color: color($colors,primary);
+        }
+        span{
+            text-align: left;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        h1{
+            font-size: 47px;
+            color: color($colors, primary);
+        }
+    }
+    .title{
+        color: color($colors,primary);
+        font-size: 54px;
+    }
+}

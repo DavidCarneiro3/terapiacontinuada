@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Go Fidelize</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <div class="image-wrapper">
+    <img [src]="'http://gofidelize.tempsite.ws/service/img/'+itens.img_promo">
+    <div class="back-shadow">
+      <span class="">{{ itens.street +', '+ itens.number +' - '+ itens.district}}</span>
+      <span class="phone" (tap)="call(itens.phone)">{{itens.phone}}</span>
+    </div>
+    
+  </div>
+  <div class="view">
+    <label><ion-icon name="md-eye"></ion-icon>
+      {{views}}</label>
+  </div>
+  
+    <div class="info">  
+      <h2 class="title">{{itens.title}}</h2>
+      <p class="text">{{itens.text}}</p>
+  </div>
+</ion-content>

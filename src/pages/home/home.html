@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <ion-title>Terapia Continuada</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (tap)="goCat()">
+          <ion-icon name="ios-list"></ion-icon>
+          
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+  
+</ion-header>
+
+<ion-content>
+    <div>
+  <div class="info" ion-fixed>
+    Locais por Perto
+  </div>
+ 
+  <!-- <ion-list no-lines class="order" ion-fixed>
+    <ion-item>
+      <ion-label>Ordenar:</ion-label>
+        <ion-select [(ngModel)]="ordenation" (ionChange)="reorder()">
+          <ion-option value="+distance">Mais próximos</ion-option>
+          <ion-option value="-uscore">Pontuação+</ion-option>
+          <ion-option value="+uscore">Pontuação-</ion-option>
+        </ion-select>
+    </ion-item>
+  </ion-list> -->
+  
+  <ion-list *ngIf="users">
+  <ion-item *ngFor="let item of users | orderBy : [order]:ordenation" [hidden]="item.hidden" (click)="openModal(item)" >
+      
+      <ion-thumbnail item-start>
+        <img src="{{item.img}}">
+      </ion-thumbnail>
+      <h2 class="title">{{item.name}}</h2>
+      <p>{{item.street+', '+item.number}}</p>
+      <p *ngIf="item.distance"><ion-icon class="icon" name="pin"></ion-icon>{{' '+item.distance+' km'}}</p>
+      <p *ngIf="!item.distance"><ion-icon class="icon" name="pin"></ion-icon> Carregando...</p>
+      <p><ion-icon class="icon" name="ios-star"></ion-icon>{{' '+item.uscore+' '}}<ion-icon class="icon" name="ribbon"></ion-icon>{{' '+item.uexc+' '}}</p>
+      <ion-icon name="arrow-dropright" item-end color="primary"></ion-icon>
+    </ion-item>
+ </ion-list>
+</div>
+ <!-- Skeleton screen -->
+<!-- <div *ngIf="!item">
+  <div class="ion-padding custom-skeleton">
+    <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+    <ion-skeleton-text animated></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+  </div>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-skeleton-text animated style="width: 27px; height: 27px" slot="start"></ion-skeleton-text>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div> -->
+</ion-content>
