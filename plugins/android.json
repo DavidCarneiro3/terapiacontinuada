@@ -1,0 +1,50 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "call-number": {
+      "PACKAGE_NAME": "br.com.terapiacontinuada"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "br.com.terapiacontinuada"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "br.com.terapiacontinuada"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "br.com.terapiacontinuada"
+    },
+    "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "br.com.terapiacontinuada"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "br.com.terapiacontinuada"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "br.com.terapiacontinuada"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "br.com.terapiacontinuada"
+    },
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": {
+      "OKHTTP_VERSION": "3.+",
+      "PACKAGE_NAME": "br.com.terapiacontinuada"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-actionsheet": {
+      "PACKAGE_NAME": "br.com.terapiacontinuada"
+    },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "br.com.terapiacontinuada"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "br.com.terapiacontinuada"
+    }
+  }
+}

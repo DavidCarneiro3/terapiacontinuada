@@ -1,0 +1,58 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+      <ion-title>
+        Minha Conta
+      </ion-title>
+      <ion-buttons end>
+      <button ion-button icon-only (tap)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+        Sair
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  
+    <h2 class="head">Dados Pessoais</h2>
+    <ion-item>
+      <ion-label >Cpf:</ion-label>
+      <ion-input type="text" disabled="true" [(ngModel)]="user.cpf"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label >Name:</ion-label>
+      <ion-input type="text"  [(ngModel)]="user.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label >Fone:</ion-label>
+      <ion-input  type="text" name="phone" [brmasker]="{mask:'(00) 00000-0000', len:15}" [(ngModel)]="user.phone" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label >Aniversário:</ion-label>
+      <ion-input required name="birth" [brmasker]="{mask:'00/00/0000', len:10}" [(ngModel)]="user.birth"></ion-input>
+    </ion-item>
+    <ion-list>
+      <ion-item>
+        <ion-label>Sexo</ion-label>
+        <ion-select [(ngModel)]="fkgender" placeholder="{{user.gender}}">
+          <ion-option value="{{user.fkgender}}" selected="true">{{user.gender}}</ion-option>
+          <ion-option value="1">Feminino</ion-option>
+          <ion-option value="2">Masculino</ion-option>
+          <ion-option value="3">Outro</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+      <h2 class="head">Dados da Conta</h2>
+  
+    <ion-item>
+      <ion-label >Email:</ion-label>
+      <ion-input type="email" value="{{user.email}}" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label >Senha:</ion-label>
+      <ion-input type="password" value="{{user.pass}}" [(ngModel)]="user.pass"></ion-input>
+    </ion-item>
+    <button ion-button block icon-right (tap)="upUser()">Salvar<ion-icon name="send"></ion-icon></button>
+    
+</ion-content>

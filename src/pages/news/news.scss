@@ -1,0 +1,16 @@
+page-news {
+  .title{
+    margin-top: 10%;
+    color: color($colors,primary);
+  }
+  .text{
+    margin-top: 10%;
+    color: color($colors,fonts);
+  }
+  .percent{
+    float: right;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    
+  }
+}

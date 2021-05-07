@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Acompanhamento</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of itens" (tap)="goTo(item.cod)">
+      <p class="percent">
+        <circle-progress
+          [percent]="item.percent"
+          [radius]="40"
+          [showSubtitle]="false"
+          [showBackground]="true"
+          [showInnerStroke]="true"
+          [titleFontSize]="18"
+          [outerStrokeWidth]="3"
+          [innerStrokeWidth]="1"
+          [outerStrokeColor]="'#3c9183'"
+          [innerStrokeColor]="'#C7E596'"
+          [animation]="true"
+          [animationDuration]="300"
+        ></circle-progress>
+      </p>
+      <h2 class="title">{{item.name}}</h2>
+      <p color="text">Exercícios concluídos: {{item.count+'/'+item.count_ok}}</p>
+      
+    </ion-item>
+  </ion-list>
+</ion-content>
