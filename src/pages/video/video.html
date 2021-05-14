@@ -1,0 +1,74 @@
+<!--
+  Generated template for the VideoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Videos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding [scrollEvents]="true" (ionScroll)="didScroll($event)">
+  <ion-card>
+    <ion-card-header>
+        <ion-card-title>Video 1</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <video #player playsinline preload="auto" controls>
+        <source src="http://gofidelize.com.br/terapia/videos/video1.mp4" type="video/mp4" />
+      </video>
+      <!-- <div class="bar">
+        <button ion-button (click)="openFullScreen(player)" color="light" clear icon-only><ion-icon name="ios-easel"></ion-icon></button>
+        <button ion-button (click)="playOnSide(player)" color="light" clear icon-only><ion-icon name="ios-open"></ion-icon></button>
+      </div> -->
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+        <ion-card-title>Video 2</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <video #player playsinline preload="auto" controls>
+        <source src="http://gofidelize.com.br/terapia/videos/video2.mp4" type="video/mp4" />
+      </video>
+      <!-- <div class="bar">
+        <button ion-button (click)="openFullScreen(player)" color="light" clear icon-only><ion-icon name="ios-easel"></ion-icon></button>
+        <button ion-button (click)="playOnSide(player)" color="light" clear icon-only><ion-icon name="ios-open"></ion-icon></button>
+      </div> -->
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+        <ion-card-title>Video 3</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <video #player playsinline preload="auto" controls>
+        <source src="http://gofidelize.com.br/terapia/videos/video3.mp4" type="video/mp4" />
+      </video>
+      <!-- <div class="bar">
+        <button ion-button (click)="openFullScreen(player)" color="light" clear icon-only><ion-icon name="ios-easel"></ion-icon></button>
+        <button ion-button (click)="playOnSide(player)" color="light" clear icon-only><ion-icon name="ios-open"></ion-icon></button>
+      </div> -->
+    </ion-card-content>
+  </ion-card>
+  <div class="sticky-video" #stickyplayer [hidden]='!stickyVideo'>
+    <div class="sticky-controls" *ngIf="stickyVideo">
+      <ion-row class="ion-no-padding">
+        <ion-col size="4">
+          <button ion-button small (click)="closeSticky()" icon-only color="light" clear><ion-icon name="ios-close-circle"></ion-icon></button>
+        </ion-col>
+        <ion-col size="4">
+          <button ion-button small (click)="playOrPauseSicky()" icon-only color="light" clear><ion-icon [name]="stickyPlaying? 'pause' : 'play'"></ion-icon></button>
+        </ion-col>
+        <ion-col size="4">
+          <button ion-button small (click)="openFullScreen(stickyVideo)" icon-only color="light" clear><ion-icon name="easel"></ion-icon></button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>

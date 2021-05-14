@@ -10,7 +10,6 @@ import { FunctionProvider } from '../../providers/service/functions';
 import { CallNumber } from '@ionic-native/call-number';
 import { Geolocation } from '@ionic-native/geolocation';
 import { CurrencyPipe } from '@angular/common';
-import { ExchangePage } from '../exchange/exchange';
 
 
 @Component({

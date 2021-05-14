@@ -4,7 +4,6 @@ import { ServiceProvider } from '../../providers/service/service';
 import { SigninPage } from '../signin/signin';
 import { FunctionProvider } from '../../providers/service/functions';
 import { SignupPage } from '../signup/signup';
-import { HomeGuestPage } from '../home-guest/home-guest';
 import { HomePage } from '../home/home';
 import { TabsPage } from '../tabs/tabs';
 
@@ -55,8 +54,6 @@ export class CpfInfoPage {
     
   }
 
-  goGuest(){
-    this.navCtrl.push(HomeGuestPage)
-  }
+
 
 }

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule, IonicPageModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -17,7 +17,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { NewsPage } from '../pages/news/news';
 import { NewsItemPage } from '../pages/news-item/news-item';
-import { ExchangePage } from '../pages/exchange/exchange';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
 //pipes
@@ -39,6 +38,7 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator';
 //components
 import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
 import { ShopPage } from '../pages/shop/shop';
+import { VideoPage } from '../pages/video/video';
 
 
 
@@ -67,8 +67,8 @@ import { ShopPage } from '../pages/shop/shop';
     TabsPage,
     NewsPage,
     NewsItemPage,
-    ExchangePage,
-    ShopPage
+    ShopPage,
+    VideoPage
     
   ],
   imports: [
@@ -99,8 +99,8 @@ import { ShopPage } from '../pages/shop/shop';
     TabsPage,
     NewsPage,
     NewsItemPage,
-    ExchangePage,
-    ShopPage
+    ShopPage,
+    VideoPage
   ],
   providers: [
     StatusBar,
@@ -116,6 +116,7 @@ import { ShopPage } from '../pages/shop/shop';
     CurrencyPipe,
     LaunchNavigator
     
-  ]
+  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {}

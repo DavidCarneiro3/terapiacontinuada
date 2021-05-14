@@ -56,7 +56,8 @@ page-shop {
             float:left;
         }
         .card{
-          height: 180px;
+          width: 100%;
+          height: 280px;
           text-align: center;
           .card-title{
             //font-family: 'kohinoor';
@@ -74,7 +75,7 @@ page-shop {
             padding: 1%;
           }
           img{
-            height: 100px;
+            height: 180px;
           }
     
         }

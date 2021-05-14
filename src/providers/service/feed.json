@@ -1,0 +1,17 @@
+[
+    {
+        "id": 0,
+        "title": "Vídeo 1",
+        "src": "http://devdatic.com/video/preview1.mp4"
+    },
+    {
+        "id": 1,
+        "title": "Vídeo 2",
+        "src": "http://devdatic.com/video/preview2.mp4"
+    },
+    {
+        "id": 2,
+        "title": "Vídeo 3",
+        "src": "http://devdatic.com/video/preview3.mp4"
+    }
+]

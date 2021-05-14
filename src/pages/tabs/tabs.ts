@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MyChangesPage } from '../my-changes/my-changes';
 import { HomePage } from '../home/home';
 import { UserPage } from '../user/user';
 import { NewsPage } from '../news/news';
 import { ServiceProvider } from '../../providers/service/service';
 import { UserInfoProvider } from '../../providers/service/user-info';
 import { ShopPage } from '../shop/shop';
+import { VideoPage } from '../video/video';
 
 @Component({
   selector: 'page-tabs',
   templateUrl: 'tabs.html',
 })
 export class TabsPage {
-  changes: any = MyChangesPage
   home: any = HomePage
   user: any = UserPage
   news: any = NewsPage
   shop: any = ShopPage
+  video: any = VideoPage
   valbadge: any
   email: string = "";
   constructor(public navCtrl: NavController, 
