@@ -5,6 +5,18 @@ page-video {
         display: inline-block;
         vertical-align: middle;
     }
+ 
+    .card{
+        height: 350px;
+        .title{
+            color: color($colors, primary);
+        }
+    }
+  
+    .title-desc{
+        color: color($colors, primary);
+        margin-top: 5%!important;
+    }
 
  
 

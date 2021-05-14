@@ -16,7 +16,7 @@
 <ion-content padding [scrollEvents]="true" (ionScroll)="didScroll($event)">
   <ion-card>
     <ion-card-header>
-        <ion-card-title>Video 1</ion-card-title>
+        <ion-card-title class="title">Video 1</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <video #player playsinline preload="auto" controls>
@@ -26,11 +26,15 @@
         <button ion-button (click)="openFullScreen(player)" color="light" clear icon-only><ion-icon name="ios-easel"></ion-icon></button>
         <button ion-button (click)="playOnSide(player)" color="light" clear icon-only><ion-icon name="ios-open"></ion-icon></button>
       </div> -->
+      <div class="info">
+        <h1 class="title-desc">Titulo da descrição</h1>
+        <p class="desc">Descrição com todas as informações acerca do vídeo</p>
+      </div>
     </ion-card-content>
   </ion-card>
   <ion-card>
     <ion-card-header>
-        <ion-card-title>Video 2</ion-card-title>
+        <ion-card-title class="title">Video 2</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <video #player playsinline preload="auto" controls>
@@ -40,11 +44,15 @@
         <button ion-button (click)="openFullScreen(player)" color="light" clear icon-only><ion-icon name="ios-easel"></ion-icon></button>
         <button ion-button (click)="playOnSide(player)" color="light" clear icon-only><ion-icon name="ios-open"></ion-icon></button>
       </div> -->
+      <div class="info">
+        <h1 class="title-desc">Titulo da descrição</h1>
+        <p class="desc">Descrição com todas as informações acerca do vídeo</p>
+      </div>
     </ion-card-content>
   </ion-card>
-  <ion-card>
+  <ion-card class="card">
     <ion-card-header>
-        <ion-card-title>Video 3</ion-card-title>
+        <ion-card-title class="title">Video 3</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <video #player playsinline preload="auto" controls>
@@ -54,6 +62,10 @@
         <button ion-button (click)="openFullScreen(player)" color="light" clear icon-only><ion-icon name="ios-easel"></ion-icon></button>
         <button ion-button (click)="playOnSide(player)" color="light" clear icon-only><ion-icon name="ios-open"></ion-icon></button>
       </div> -->
+      <div class="info">
+        <h1 class="title-desc">Titulo da descrição</h1>
+        <p class="desc">Descrição com todas as informações acerca do vídeo</p>
+      </div>
     </ion-card-content>
   </ion-card>
   <div class="sticky-video" #stickyplayer [hidden]='!stickyVideo'>
